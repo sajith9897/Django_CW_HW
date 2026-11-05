@@ -1,0 +1,42 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Classroom</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Student Classroom</h1>
+
+        {% for student in students %}
+
+            <div class="student">
+
+                <h3>{{ student.name }}</h3>
+
+                <p>Grade: {{ student.grade }}</p>
+
+                {% if student.passed %}
+                    <p class="passed">Passed</p>
+                {% else %}
+                    <p class="failed">Failed</p>
+                {% endif %}
+
+            </div>
+
+        {% empty %}
+
+            <p class="empty">No students found.</p>
+
+        {% endfor %}
+
+    </div>
+
+</body>
+</html>
