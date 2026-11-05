@@ -14,9 +14,12 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.urls import path
+from django.urls import path,include
 from classwork1 import views
+
 urlpatterns = [
-  path('for home', views.home),
-  path('for about', views.about)
+  path('', views.home),
+  path('for about', views.about),
+  path('homework/', include('homework1.urls'))
 ]
+

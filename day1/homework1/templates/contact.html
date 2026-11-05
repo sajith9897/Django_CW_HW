@@ -2,8 +2,9 @@
 <html>
 <head>
     <title>Contact Me</title>
-    <link rel="stylesheet" href="{% static'style.css' %}">
-    <script src="{% static'script.js' %}"></script>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <script src="{% static 'script.js' %}"></script>
 </head>
 
 <body>
@@ -12,7 +13,7 @@
     <p>
         Hello! Thank you for visiting my website.
     </p>
-    <button id="button">Click Me</button>
+    <button onclick="showmessage()">Click Me</button>
 
     <p id="message"></p>
 
