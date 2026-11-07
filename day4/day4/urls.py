@@ -19,5 +19,5 @@ from classwork4 import views
 
 urlpatterns = [
     path('', views.login),
-    # path('homework/', include('homework4.urls'))
+    path('homework/', include('homework4.urls'))
 ]
