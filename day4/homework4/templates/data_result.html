@@ -1,0 +1,26 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Submitted Data</title>
+    <link rel="stylesheet" href="{% static 'visitor_style.css' %}">
+</head>
+
+<body style="background-color: {{ color }};">
+
+    <div class="container">
+
+        <h2>Hello {{ name }}, your favorite color is {{ color }}!</h2>
+
+        <h3>Full Submitted Data</h3>
+
+        <p>Name: {{ name }}</p>
+        <p>Favorite Color: {{ color }}</p>
+
+        <a href="{% url 'home' %}">Go Back</a>
+
+    </div>
+
+</body>
+</html>
