@@ -17,6 +17,9 @@ Including another URLconf
 from django.urls import path
 from classwork6 import views
 
+from django.urls import path, include
+
 urlpatterns = [
-    path('', views.add_movie, name='add_movie'),
+    path('classwork/', include('classwork6.urls')),
+    path('homework/', include('homework6.urls')),
 ]
