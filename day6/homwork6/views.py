@@ -15,6 +15,8 @@ def contact(request):
             phone=phone
         )
 
-        return render(request, 'homework6/thankyou.html', {'name': name})
+        return render(request, 'homwork6/thankyou.html', {
+            'name': name
+        })
 
-    return render(request, 'homework6/contact.html')
+    return render(request, 'homwork6/contact.html')
