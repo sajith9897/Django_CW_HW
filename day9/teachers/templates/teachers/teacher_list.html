@@ -1,0 +1,54 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher List</title>
+    <link rel="stylesheet" href="{% static 'teachers/teachers.css' %}">
+</head>
+<body>
+
+<header>
+    <h2>EduCampus</h2>
+    <a href="{% url 'homework9:home' %}">Back to Home</a>
+</header>
+
+<main class="container">
+
+    <div class="heading">
+        <h1>{{ message }}</h1>
+        <p>College Faculty Directory</p>
+    </div>
+
+    <div class="table-card">
+        <table>
+            <thead>
+                <tr>
+                    <th>Teacher ID</th>
+                    <th>Name</th>
+                    <th>Subject</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                {% for teacher in teachers %}
+                <tr>
+                    <td>{{ teacher.id }}</td>
+                    <td>{{ teacher.name }}</td>
+                    <td>{{ teacher.subject }}</td>
+                </tr>
+                {% empty %}
+                <tr>
+                    <td colspan="3">No teachers found.</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+</main>
+
+</body>
+</html>

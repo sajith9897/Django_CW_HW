@@ -1,0 +1,51 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Login</title>
+    <link rel="stylesheet" href="{% static 'classwork9/css/style.css' %}">
+</head>
+<body>
+
+<header class="navbar">
+    <h2>EduTrack</h2>
+    <span>Secure Result Access</span>
+</header>
+
+<div class="login-wrapper">
+    <div class="login-card">
+        <div class="login-icon">🎓</div>
+        <h1>Welcome Back</h1>
+        <p>Login to view the result of <strong>{{ name }}</strong></p>
+
+        {% if error %}
+        <div class="error">{{ error }}</div>
+        {% endif %}
+
+        <form method="POST">
+            {% csrf_token %}
+
+            <label>Username</label>
+            <input type="text" name="username"
+                   placeholder="Enter username" required>
+
+            <label>Password</label>
+            <input type="password" name="password"
+                   placeholder="Enter password" required>
+
+            <button type="submit" class="btn login-btn">
+                Login & View Result
+            </button>
+        </form>
+
+        <a href="{% url 'classwork9:home' %}" class="back-link">
+            Back to Students
+        </a>
+    </div>
+</div>
+
+</body>
+</html>

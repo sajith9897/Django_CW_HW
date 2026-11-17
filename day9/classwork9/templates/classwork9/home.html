@@ -1,0 +1,56 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal</title>
+    <link rel="stylesheet" href="{% static 'classwork9/css/style.css' %}">
+</head>
+<body>
+
+<header class="navbar">
+    <h2>EduTrack</h2>
+    <span>Student Management Portal</span>
+</header>
+
+<main class="container">
+    <div class="page-heading">
+        <h1>Student Directory</h1>
+        <p>View academic results of registered students.</p>
+    </div>
+
+    <div class="table-card">
+        <table>
+            <thead>
+                <tr>
+                    <th>Sl. No.</th>
+                    <th>Student Name</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for name, marks in students.items %}
+                <tr>
+                    <td>{{ forloop.counter }}</td>
+                    <td class="student-name">{{ name }}</td>
+                    <td>
+                        <a href="{% url 'classwork9:login' name %}"
+                           class="btn">
+                            View Result
+                        </a>
+                    </td>
+                </tr>
+                {% empty %}
+                <tr>
+                    <td colspan="3">No students found.</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</main>
+
+</body>
+</html>

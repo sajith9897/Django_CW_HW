@@ -1,0 +1,48 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Management System</title>
+    <link rel="stylesheet" href="{% static 'homework9/home.css' %}">
+</head>
+<body>
+
+<header>
+    <h2>EduCampus</h2>
+    <nav>
+        <a href="{% url 'homework9:home' %}">Home</a>
+        <a href="{% url 'students:list' 'Welcome Students' %}">Students</a>
+        <a href="{% url 'teachers:list' 'Welcome Teachers' %}">Teachers</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>College Management System</h1>
+    <p>Manage and explore student and teacher information.</p>
+
+    <div class="cards">
+        <div class="card">
+            <div class="emoji">🎓</div>
+            <h2>Students</h2>
+            <p>View all registered college students.</p>
+            <a href="{% url 'students:list' 'Welcome Students' %}">
+                View Students
+            </a>
+        </div>
+
+        <div class="card">
+            <div class="emoji">👨‍🏫</div>
+            <h2>Teachers</h2>
+            <p>Explore the college teaching staff.</p>
+            <a href="{% url 'teachers:list' 'Welcome Teachers' %}">
+                View Teachers
+            </a>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
