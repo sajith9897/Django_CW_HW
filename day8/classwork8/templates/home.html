@@ -1,0 +1,27 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classwork - Home</title>
+
+    <link rel="stylesheet" href="{% static 'classwork8/style.css' %}">
+</head>
+<body>
+
+    {% include 'classwork8/header.html' %}
+
+    <div class="container">
+        <h2>Welcome to Homepage</h2>
+
+        <p>This is the homepage of our Django website.</p>
+
+        <a href="{% url 'classwork8:about' %}">
+            Go to About Page
+        </a>
+    </div>
+
+</body>
+</html>
