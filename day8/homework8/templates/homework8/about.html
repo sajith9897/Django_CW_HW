@@ -1,0 +1,27 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework - About</title>
+
+    <link rel="stylesheet" href="{% static 'homework8/style.css' %}">
+</head>
+<body>
+
+    {% include 'homework8/header.html' %}
+
+    <div class="container">
+        <h2>About My Website</h2>
+
+        <p>This website is developed using Python and Django.</p>
+
+        <a href="{% url 'homework8:home' %}">
+            Back to Homepage
+        </a>
+    </div>
+
+</body>
+</html>
