@@ -1,0 +1,109 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #eef7f3;
+    margin: 0;
+    padding: 40px 15px;
+}
+
+.container {
+    max-width: 950px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px #00000012;
+}
+
+h1 {
+    color: #176b4d;
+    margin-top: 0;
+}
+
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.search-form {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+input {
+    padding: 11px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.search-form input {
+    width: 230px;
+}
+
+.btn, button {
+    display: inline-block;
+    background: #198754;
+    color: white;
+    padding: 11px 18px;
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 25px;
+}
+
+th, td {
+    padding: 14px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background: #176b4d;
+    color: white;
+}
+
+td a {
+    color: #198754;
+    text-decoration: none;
+    margin-right: 12px;
+}
+
+.delete {
+    color: #d62828;
+}
+
+.form-container {
+    max-width: 500px;
+}
+
+.form-container input {
+    width: 100%;
+}
+
+.form-container form p {
+    margin-bottom: 20px;
+}
+
+.form-container > a {
+    display: inline-block;
+    margin-top: 20px;
+    color: #176b4d;
+}
+
+.danger {
+    background: #d62828;
+}
