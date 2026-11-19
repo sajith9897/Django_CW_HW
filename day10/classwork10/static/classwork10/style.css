@@ -1,0 +1,94 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f5fa;
+    margin: 0;
+    padding: 40px 15px;
+}
+
+.container {
+    max-width: 950px;
+    margin: auto;
+    padding: 30px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px #00000015;
+}
+
+h1 {
+    color: #263b60;
+    margin-top: 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 25px;
+}
+
+th, td {
+    padding: 14px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background: #263b60;
+    color: white;
+}
+
+a {
+    color: #2463b5;
+    text-decoration: none;
+    margin-right: 12px;
+}
+
+.btn, button {
+    display: inline-block;
+    padding: 11px 20px;
+    background: #2463b5;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.delete {
+    color: #d62828;
+}
+
+.pagination {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.pagination span {
+    margin: 0 15px;
+}
+
+.form-container {
+    max-width: 500px;
+}
+
+input {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form p {
+    margin-bottom: 20px;
+}
+
+.danger {
+    background: #d62828;
+}
+
+.form-container > a {
+    display: inline-block;
+    margin-top: 20px;
+}
